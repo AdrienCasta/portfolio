@@ -5,197 +5,200 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Adrien Castagliola | Senior Front-End developer">
-	<main class="bg-violet-2 dark:bg-violet-dark-2">
-		<section class="p-8 flex flex-col">
-			<header>
-				<nav class="flex flex-row-reverse">
-					<ul class="flex gap-3">
-						<li>
-							<a class="text-violet-12 dark:text-violet-dark-12 hover:text-violet-11 hover:dark:text-violet-dark-11 hover:underline underline-offset-2 text-2xl font-heading" href="">About</a>
-						</li>
-						<li>
-							<a class="text-violet-12 dark:text-violet-dark-12 hover:text-violet-11 hover:dark:text-violet-dark-11 hover:underline underline-offset-2 text-2xl font-heading" href="">Projects</a>
-						</li>
-						<li>
-							<a class="text-violet-12 dark:text-violet-dark-12 hover:text-violet-11 hover:dark:text-violet-dark-11 hover:underline underline-offset-2 text-2xl font-heading" href="">Contact</a>
-						</li>
-						<li>
-							<SwitchTheme />
-						</li>
-					</ul>
-				</nav>
-			</header>
-			<div class="flex-1 flex">
-				<div>
-					<div class="absolute left-0 top-0 w-80 h-80">
-						<BackgroundNet />
-					</div>
-					<div class="z-10 relative mt-14">
-						<h1 class="text-6xl text-violet-12 dark:text-violet-dark-12 z-10">
-							Salut,<span class="block">Je suis <span class="text-violet-11 dark:text-violet-dark-11">Adrien Castagliola</span>.</span> 
-						</h1>
-						<p class="text-violet-12 dark:text-violet-dark-12 mt-2 text-2xl">
-							Un développeur frontend expérimenté, spécialisé dans la création d'application web et mobile.
-						</p>
-						<div class="flex gap-4 items-center mt-10">
-							<ul class="flex gap-3">
-								<li>
-									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://www.linkedin.com/in/adriencastagliola/">
-										LinkedIn
-									</a>
-								</li>
-								<li>
-									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://www.malt.fr/profile/adriencastagliola?overview">
-										Malt
-									</a>
-								</li>
-								<li>
-									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://github.com/AdrienCasta">
-										GitHub
-									</a>
-								</li>
-							</ul>
+	<main class="bg-violet-2 dark:bg-violet-dark-2 flex justify-center">
+		<div class="max-w-7xl ">
+			<section class="p-8 flex flex-col">
+				<header>
+					<nav class="flex flex-row-reverse">
+						<ul class="flex gap-3">
+							<li>
+								<a class="text-violet-12 dark:text-violet-dark-12 hover:text-violet-11 hover:dark:text-violet-dark-11 hover:underline underline-offset-2 text-2xl font-heading" href="">About</a>
+							</li>
+							<li>
+								<a class="text-violet-12 dark:text-violet-dark-12 hover:text-violet-11 hover:dark:text-violet-dark-11 hover:underline underline-offset-2 text-2xl font-heading" href="">Projects</a>
+							</li>
+							<li>
+								<a class="text-violet-12 dark:text-violet-dark-12 hover:text-violet-11 hover:dark:text-violet-dark-11 hover:underline underline-offset-2 text-2xl font-heading" href="">Contact</a>
+							</li>
+							<li>
+								<SwitchTheme />
+							</li>
+						</ul>
+					</nav>
+				</header>
+				<div class="flex-1 flex relative">
+					<div>
+						<div class="absolute left-0 top-0 w-80 h-80">
+							<BackgroundNet />
+						</div>
+						<div class="z-10 relative mt-14">
+							<h1 class="text-6xl text-violet-12 dark:text-violet-dark-12 z-10">
+								Salut,<span class="block">Je suis <span class="text-violet-11 dark:text-violet-dark-11">Adrien Castagliola</span>.</span> 
+							</h1>
+							<p class="text-violet-12 dark:text-violet-dark-12 mt-2 text-2xl">
+								Un développeur frontend expérimenté, spécialisé dans la création d'application web et mobile.
+							</p>
+							<div class="flex gap-4 items-center mt-10">
+								<ul class="flex gap-3">
+									<li>
+										<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://www.linkedin.com/in/adriencastagliola/">
+											LinkedIn
+										</a>
+									</li>
+									<li>
+										<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://www.malt.fr/profile/adriencastagliola?overview">
+											Malt
+										</a>
+									</li>
+									<li>
+										<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://github.com/AdrienCasta">
+											GitHub
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="p-8">
-			<div class="flex items-end mb-8 gap-3">
-				<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
-					A propos de moi
-				</h2>
-				<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
-			</div>
-			<p class="text-violet-12 dark:text-violet-dark-12 text-xl ">
-				Je suis Adrien Castagliola, un développeur frontend chevronné avec 7 années d'expérience, spécialisé en React et TypeScript. Je suis passionné par la création d'interfaces web interactives qui suscitent l'engagement des utilisateurs.
-			</p>
-			<h3 class="text-3xl text-violet-12 dark:text-violet-dark-12 mt-4 mb-2">Mon expertise</h3>
-			<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
-				Avec une solide expérience dans l'industrie du développement web, je me suis spécialisé dans l'utilisation de React, un framework JavaScript populaire, ainsi que TypeScript, un langage de programmation qui améliore la sécurité et la lisibilité du code. Mon objectif principal est de rendre la technologie accessible à tous, en créant des applications web intuitives et performantes.
-			</p>
-			<h3 class="text-3xl text-violet-12 dark:text-violet-dark-12 mt-4 mb-2">Mes services</h3>
-			<ol class="flex flex-col gap-3">
-				<li class="text-violet-12 dark:text-violet-dark-12 text-xl">
-					<strong class="font-bold">Expertise Technique</strong>: Maîtrisant React et TypeScript, je peux transformer vos idées en interfaces utilisateur dynamiques et réactives, offrant une expérience utilisateur optimale.
-				</li>
-				<li class="text-violet-12 dark:text-violet-dark-12 text-xl">
-					<strong class="font-bold">Créativité et Adaptabilité</strong>: Je suis passionné par l'innovation et la créativité. Je m'adapte aux nouvelles tendances et je suis constamment à la recherche de moyens d'améliorer l'expérience de l'utilisateur tout en respectant vos besoins spécifiques.
-				</li>
-				<li class="text-violet-12 dark:text-violet-dark-12 text-xl">
-					<strong class="font-bold">Collaboration Transparente</strong>: Je crois en une communication ouverte et en une collaboration étroite avec mes clients. Je suis là pour comprendre vos besoins et vous offrir des solutions personnalisées et efficaces.
-				</li>
-			</ol>
-		</section>
-		<section class="p-8 relative">
-			<div class="flex items-end mb-8 gap-3">
-				<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
-					Mes outils
-				</h2>
-				<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
-			</div>
-			<p class="text-violet-12 dark:text-violet-dark-12 text-xl">Je me suis spécialisé sur des technologies modernes, optimisées et à l'épreuve du temps.</p>
-			<div>
-				<div class="mt-6">
-				  <dl class="divide-y divide-violet-6 dark:divide-violet-dark-6">
-					<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-					  <dt class="text-violet-11 dark:text-violet-dark-11">Languages frontent</dt>
-					  <dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">Javascript, Typescript, HTML, CSS</dd>
-					</div>
-					<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-					  <dt class="text-violet-11 dark:text-violet-dark-11">Frameworks Frontend</dt>
-					  <dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">React, Next, Astro</dd>
-					</div>
-					<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-						<dt class="text-violet-11 dark:text-violet-dark-11">Utilitaires CSS</dt>
-						<dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">Tailwind, Emotion</dd>
-					  </div>
-					<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-						<dt class="text-violet-11 dark:text-violet-dark-11">Frameworks mobile</dt>
-						<dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">React Native</dd>
-					</div>
-					<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-						<dt class="text-violet-11 dark:text-violet-dark-11">Languages backend</dt>
-						<dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">NodeJS, PHP</dd>
-					</div>
-					<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-					  <dt class="text-violet-11 dark:text-violet-dark-11">Outils de tests</dt>
-					  <dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">Vitest, React Testing Library, Cypress</dd>
-					</div>
-				  </dl>
+			</section>
+			<section class="p-8">
+				<div class="flex items-end mb-8 gap-3">
+					<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
+						A propos de moi
+					</h2>
+					<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
 				</div>
-			</div>	
-		</section>
-		<section class="p-8">
-			<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12 mb-8">
-			</h2>
-			<div class="flex items-end mb-8 gap-3">
-				<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
-					My last experiences
-				</h2>
-				<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
-			</div>
-			<div class="flex flex-wrap gap-6">
-				<article class="flex-auto basis-96">
-					<header>
-						<h3 class="text-violet-12 dark:text-violet-dark-12 text-3xl">
-							BuyCo
-						</h3>
-						<span class="text-violet-12 dark:text-violet-dark-12 text-xl italic block py-2">The Collaborative Platform for your Container Shipping.</span>
-					</header>
-					<section>
-						<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
-							As a Senior Front-End developer specialising in <strong class="text-violet-11 dark:text-violet-dark-11">React</strong> and <strong class="text-violet-11 dark:text-violet-dark-11">Typescript</strong> i was asked to enhanced the software by implementing new features in collaboration with the team.
-						</p>
-					</section>
-				</article>
-				<article class="flex-auto basis-96">
-					<header>
-						<h3 class="text-violet-12 dark:text-violet-dark-12 text-3xl">
-							Edflex
-						</h3>
-						<span class="text-violet-12 dark:text-violet-dark-12 text-xl italic block py-2">The best learning content for your company.</span>
-					</header>
-					<section>
-						<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
-							I joined the tech & product team to develop new features to enhance the user experience and enrich the software. We <strong class="text-violet-11 dark:text-violet-dark-11">React</strong> and <strong class="text-violet-11 dark:text-violet-dark-11">Typescript</strong> to implement accessible and optimized features in order to satisfy our customers (the biggest CAC40 companies).
-						</p>
-					</section>
-				</article>
-				<article class="flex-auto basis-96">
-					<header>
-						<h3 class="text-violet-12 dark:text-violet-dark-12 text-3xl">
-							Edflex
-						</h3>
-						<span class="text-violet-12 dark:text-violet-dark-12 text-xl italic block py-2">The best learning content for your company.</span>
-					</header>
-					<section>
-						<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
-							I joined the tech & product team to develop new features to enhance the user experience and enrich the software. We <strong class="text-violet-11 dark:text-violet-dark-11">React</strong> and <strong class="text-violet-11 dark:text-violet-dark-11">Typescript</strong> to implement accessible and optimized features in order to satisfy our customers (the biggest CAC40 companies).
-						</p>
-					</section>
-				</article>
-			</div>
-		</section>
-		<section class="p-8">
-			<div class="flex items-end mb-8 gap-3">
-				<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
-					Rencontrons-nous !
-				</h2>
-				<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
-			</div>
-			<div class="text-violet-12 dark:text-violet-dark-12 text-2xl">
-				<p>
-					Vous pouvez me joindre via <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="">LinkedIn</a> et voir mes projets sur <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="">GitHub</a>. 
+				<p class="text-violet-12 dark:text-violet-dark-12 text-xl ">
+					Je suis Adrien Castagliola, un développeur frontend chevronné avec 7 années d'expérience, spécialisé en React et TypeScript. Je suis passionné par la création d'interfaces web interactives qui suscitent l'engagement des utilisateurs.
 				</p>
-				<p>
-					N'hésitez pas à m'envoyer un <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="mailto:adrien.castagliola@gmail.com">
-						e-mail
-					</a> or un  <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="sms:+33647046382">
-						SMS
-					</a>.  
+				<h3 class="text-3xl text-violet-12 dark:text-violet-dark-12 mt-4 mb-2">Mon expertise</h3>
+				<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
+					Avec une solide expérience dans l'industrie du développement web, je me suis spécialisé dans l'utilisation de React, un framework JavaScript populaire, ainsi que TypeScript, un langage de programmation qui améliore la sécurité et la lisibilité du code. Mon objectif principal est de rendre la technologie accessible à tous, en créant des applications web intuitives et performantes.
 				</p>
-			</div>
-		</section>
+				<h3 class="text-3xl text-violet-12 dark:text-violet-dark-12 mt-4 mb-2">Mes services</h3>
+				<ol class="flex flex-col gap-3">
+					<li class="text-violet-12 dark:text-violet-dark-12 text-xl">
+						<strong class="font-bold">Expertise Technique</strong>: Maîtrisant React et TypeScript, je peux transformer vos idées en interfaces utilisateur dynamiques et réactives, offrant une expérience utilisateur optimale.
+					</li>
+					<li class="text-violet-12 dark:text-violet-dark-12 text-xl">
+						<strong class="font-bold">Créativité et Adaptabilité</strong>: Je suis passionné par l'innovation et la créativité. Je m'adapte aux nouvelles tendances et je suis constamment à la recherche de moyens d'améliorer l'expérience de l'utilisateur tout en respectant vos besoins spécifiques.
+					</li>
+					<li class="text-violet-12 dark:text-violet-dark-12 text-xl">
+						<strong class="font-bold">Collaboration Transparente</strong>: Je crois en une communication ouverte et en une collaboration étroite avec mes clients. Je suis là pour comprendre vos besoins et vous offrir des solutions personnalisées et efficaces.
+					</li>
+				</ol>
+			</section>
+			<section class="p-8 relative">
+				<div class="flex items-end mb-8 gap-3">
+					<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
+						Mes outils
+					</h2>
+					<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
+				</div>
+				<p class="text-violet-12 dark:text-violet-dark-12 text-xl">Je me suis spécialisé sur des technologies modernes, optimisées et à l'épreuve du temps.</p>
+				<div>
+					<div class="mt-6">
+					  <dl class="divide-y divide-violet-6 dark:divide-violet-dark-6">
+						<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+						  <dt class="text-violet-11 dark:text-violet-dark-11">Languages frontent</dt>
+						  <dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">Javascript, Typescript, HTML, CSS</dd>
+						</div>
+						<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+						  <dt class="text-violet-11 dark:text-violet-dark-11">Frameworks Frontend</dt>
+						  <dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">React, Next, Astro</dd>
+						</div>
+						<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+							<dt class="text-violet-11 dark:text-violet-dark-11">Utilitaires CSS</dt>
+							<dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">Tailwind, Emotion</dd>
+						  </div>
+						<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+							<dt class="text-violet-11 dark:text-violet-dark-11">Frameworks mobile</dt>
+							<dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">React Native</dd>
+						</div>
+						<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+							<dt class="text-violet-11 dark:text-violet-dark-11">Languages backend</dt>
+							<dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">NodeJS, PHP</dd>
+						</div>
+						<div class="px-2 py-3 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+						  <dt class="text-violet-11 dark:text-violet-dark-11">Outils de tests</dt>
+						  <dd class="mt-1 text-violet-12 dark:text-violet-dark-12 sm:col-span-2 sm:mt-0">Vitest, React Testing Library, Cypress</dd>
+						</div>
+					  </dl>
+					</div>
+				</div>	
+			</section>
+			<section class="p-8">
+				<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12 mb-8">
+				</h2>
+				<div class="flex items-end mb-8 gap-3">
+					<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
+						My last experiences
+					</h2>
+					<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
+				</div>
+				<div class="flex flex-wrap gap-6">
+					<article class="flex-auto basis-96">
+						<header>
+							<h3 class="text-violet-12 dark:text-violet-dark-12 text-3xl">
+								BuyCo
+							</h3>
+							<span class="text-violet-12 dark:text-violet-dark-12 text-xl italic block py-2">The Collaborative Platform for your Container Shipping.</span>
+						</header>
+						<section>
+							<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
+								As a Senior Front-End developer specialising in <strong class="text-violet-11 dark:text-violet-dark-11">React</strong> and <strong class="text-violet-11 dark:text-violet-dark-11">Typescript</strong> i was asked to enhanced the software by implementing new features in collaboration with the team.
+							</p>
+						</section>
+					</article>
+					<article class="flex-auto basis-96">
+						<header>
+							<h3 class="text-violet-12 dark:text-violet-dark-12 text-3xl">
+								Edflex
+							</h3>
+							<span class="text-violet-12 dark:text-violet-dark-12 text-xl italic block py-2">The best learning content for your company.</span>
+						</header>
+						<section>
+							<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
+								I joined the tech & product team to develop new features to enhance the user experience and enrich the software. We <strong class="text-violet-11 dark:text-violet-dark-11">React</strong> and <strong class="text-violet-11 dark:text-violet-dark-11">Typescript</strong> to implement accessible and optimized features in order to satisfy our customers (the biggest CAC40 companies).
+							</p>
+						</section>
+					</article>
+					<article class="flex-auto basis-96">
+						<header>
+							<h3 class="text-violet-12 dark:text-violet-dark-12 text-3xl">
+								Edflex
+							</h3>
+							<span class="text-violet-12 dark:text-violet-dark-12 text-xl italic block py-2">The best learning content for your company.</span>
+						</header>
+						<section>
+							<p class="text-violet-12 dark:text-violet-dark-12 text-xl">
+								I joined the tech & product team to develop new features to enhance the user experience and enrich the software. We <strong class="text-violet-11 dark:text-violet-dark-11">React</strong> and <strong class="text-violet-11 dark:text-violet-dark-11">Typescript</strong> to implement accessible and optimized features in order to satisfy our customers (the biggest CAC40 companies).
+							</p>
+						</section>
+					</article>
+				</div>
+			</section>
+			<section class="p-8">
+				<div class="flex items-end mb-8 gap-3">
+					<h2 class="text-5xl text-violet-12 dark:text-violet-dark-12">
+						Rencontrons-nous !
+					</h2>
+					<div class="background-net bg-dots dark:bg-dots-dark w-12 h-3 bg-[length:4px_4px]"></div>
+				</div>
+				<div class="text-violet-12 dark:text-violet-dark-12 text-2xl">
+					<p>
+						Vous pouvez me joindre via <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="">LinkedIn</a> et voir mes projets sur <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="">GitHub</a>. 
+					</p>
+					<p>
+						N'hésitez pas à m'envoyer un <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="mailto:adrien.castagliola@gmail.com">
+							e-mail
+						</a> or un  <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="sms:+33647046382">
+							SMS
+						</a>.  
+					</p>
+				</div>
+			</section>
+
+		</div>
 	</main>
 </Layout>
