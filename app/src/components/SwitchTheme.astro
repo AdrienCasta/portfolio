@@ -1,17 +1,19 @@
 
 ---
+import Switch from "../ui/ThemeSwitch"
 
 const DEFAULT_THEME = 'Light'
 
 ---
 <label for="theme">{DEFAULT_THEME}</label>
 <input id="theme" name="theme" type="checkbox">
+<Switch client:load />
 
 <script>
 	const checkbox = document.getElementById('theme') as HTMLInputElement | null;
 	const label = document.querySelector<HTMLLabelElement>('label[for="theme"]');
 
-	const KEY = "theme";
+	const KEY = "adrien-castagliola-theme";
 	const LIGHT = "light";
 	const DARK = "dark";
 
@@ -44,20 +46,22 @@ const DEFAULT_THEME = 'Light'
 	}
 
 	function handleLoadEvent(){
-		const theme = localStorage.getItem(KEY) || LIGHT;
+		const theme = localStorage.getItem(KEY);
 
 		if(label){
 			if(theme === DARK){
 				checkbox?.setAttribute("checked", "checked")
+				document.documentElement.classList.add(DARK);
 				label.innerHTML = "Dark"
 			} else {
 				checkbox?.removeAttribute("checked")
+				document.documentElement.classList.remove(DARK);
 				label.innerHTML = "Light"
 			}
 		 }
-		 handleThemeSwith()
 	}
 
 	checkbox?.addEventListener("change", handleCheckboxChangeEvent, false)
 	window.addEventListener('load', handleLoadEvent, false)
 </script>
+../ui/ThemeSwitch
