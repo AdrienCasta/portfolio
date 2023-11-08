@@ -20,30 +20,48 @@ const LIGHT = "light";
 const DARK = "dark";
 
 const ThemeSwitch = () => {
-  const [theme, setTheme] = React.useState(() => {
-    if (import.meta.env.SSR) {
-      return LIGHT;
-    }
-    return document.documentElement.classList.contains("dark") ? DARK : LIGHT;
-  });
+  const [theme, setTheme] = React.useState<"light" | "dark">(LIGHT);
+
+  React.useEffect(() => {
+    setTheme(document.documentElement.classList.contains(DARK) ? DARK : LIGHT);
+  }, []);
 
   React.useEffect(() => {
     const root = document.documentElement;
     if (theme === LIGHT) {
       root.classList.remove(DARK);
-      localStorage.setItem(KEY, LIGHT);
-    } else {
+    } else if (theme === DARK) {
       root.classList.add(DARK);
-      localStorage.setItem(KEY, DARK);
     }
   }, [theme]);
 
-  const handleCheckedChange = () =>
-    setTheme((value) => (value === DARK ? LIGHT : DARK));
+  const handleCheckedChange = () => {
+    setTheme((theme) => {
+      const toggledTheme = theme === DARK ? LIGHT : DARK;
+      const matchesDarkTheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+
+      if (
+        (matchesDarkTheme && toggledTheme === DARK) ||
+        (!matchesDarkTheme && toggledTheme === LIGHT)
+      ) {
+        localStorage.removeItem(KEY);
+      } else {
+        localStorage.setItem(KEY, toggledTheme);
+      }
+
+      return toggledTheme;
+    });
+  };
 
   return (
     <div className="flex items-center gap-2 ">
-      <Switch checked={theme === DARK} onCheckedChange={handleCheckedChange} />
+      <Switch
+        checked={theme === DARK}
+        onCheckedChange={handleCheckedChange}
+        aria-label="Changer de thème"
+      />
       <span className="text-violet-12 dark:text-violet-dark-12 capitalize">
         {theme}
       </span>

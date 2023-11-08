@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 import ThemeSwitch from '../ui/ThemeSwitch';
 import BackgroundNet from '../components/BackgroundNet.astro';
 import Heading from '../components/Heading.astro';
@@ -7,6 +9,14 @@ import Section from '../components/Section.astro';
 import Heading2 from '../components/Heading2.astro';
 import Highlight from '../components/Highlight.astro';
 import Layout from '../layouts/Layout.astro';
+
+import AdrienCastagliolaWebP from '../assets/images/adrien-castagliola.webp';
+
+const linkedInUrl = "https://www.linkedin.com/in/adriencastagliola/";
+const gitHubUrl = "https://github.com/AdrienCasta";
+const maltUrl = "https://www.malt.fr/profile/adriencastagliola?overview";
+const email = "adrien.castagliola@gmail.com";
+const phone = "+33647046382";
 ---
 
 <Layout title="Adrien Castagliola | Senior Front-End developer">
@@ -15,13 +25,10 @@ import Layout from '../layouts/Layout.astro';
 			<div class="flex justify-end pt-5">
 				<ThemeSwitch client:load />
 			</div>
-			<div class="absolute left-0 top-10 w-80 h-80">
-				<BackgroundNet />
-			</div>
 			<section class="flex flex-col mt-6 mb-32">
-				<header>
-					<nav class="flex flex-row-reverse font-heading">
-						<ul class="flex gap-3">
+				<header class="mb-14">
+					<nav class="flex md:flex-row-reverse font-heading">
+						<ul class="flex md:gap-3 w-full justify-between md:justify-start">
 							<li>
 								<Anchor href="#about">
 									A propos
@@ -45,28 +52,34 @@ import Layout from '../layouts/Layout.astro';
 						</ul>
 					</nav>
 				</header>
+				<div class="flex justify-center relative">
+					<div class="w-64 h-64 relative">
+						<BackgroundNet />
+						<Image class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-32 w-32 rounded-full" src={AdrienCastagliolaWebP} alt='A picture of Adrien Castagliola, a Senior Frontend developper' />
+					</div>
+				</div>
 				<div class="flex-1 flex">
-					<div class="z-10 relative mt-14">
-						<h1 class="text-6xl text-violet-12 dark:text-violet-dark-12 z-10">
+					<div class="mt-14">
+						<h1 class="text-4xl md:text-5xl text-violet-12 dark:text-violet-dark-12">
 							Salut,<span class="block">Je suis <span class="text-violet-11 dark:text-violet-dark-11">Adrien Castagliola</span>.</span> 
 						</h1>
-						<p class="text-violet-12 dark:text-violet-dark-12 mt-2 text-2xl">
+						<p class="text-violet-12 dark:text-violet-dark-12 mt-6 text-2xl">
 							Un développeur frontend expérimenté, spécialisé dans la création d' <Highlight> application web </Highlight> et <Highlight> mobile </Highlight>.
 						</p>
 						<div class="flex gap-4 items-center mt-10">
 							<ul class="flex gap-3">
 								<li>
-									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://www.linkedin.com/in/adriencastagliola/">
+									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href={linkedInUrl}>
 										LinkedIn
 									</a>
 								</li>
 								<li>
-									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://www.malt.fr/profile/adriencastagliola?overview">
+									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href={maltUrl}>
 										Malt
 									</a>
 								</li>
 								<li>
-									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href="https://github.com/AdrienCasta">
+									<a class="bg-violet-9 dark:bg-violet-dark-9 hover:bg-violet-10 hover:dark:bg-violet-dark-10 p-2 text-white transition-colors text-base font-heading" href={gitHubUrl}>
 										GitHub
 									</a>
 								</li>
@@ -179,20 +192,17 @@ import Layout from '../layouts/Layout.astro';
 				<Heading>
 					Rencontrons-nous !
 				</Heading>
-				<div class="text-violet-12 dark:text-violet-dark-12 text-2xl">
+				<div class="text-violet-12 dark:text-violet-dark-12 text-xl pb-6">
 					<p>
-						Vous pouvez me joindre via <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="">LinkedIn</a> et voir mes projets sur <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="">GitHub</a>. 
+						Vous pouvez me joindre via <a class="text-violet-11 dark:text-violet-dark-11 underline underline-offset-2" href={linkedInUrl}>LinkedIn</a> et voir mes projets sur <a class="text-violet-11 dark:text-violet-dark-11 underline underline-offset-2" href={gitHubUrl}>GitHub</a>. 
 					</p>
 					<p>
-						N'hésitez pas à m'envoyer un <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="mailto:adrien.castagliola@gmail.com">
+						N'hésitez pas à m'envoyer un <a class="text-violet-11 dark:text-violet-dark-11 underline underline-offset-2" href=`mailto:${email}`>
 							e-mail
-						</a> ou un  <a class="text-violet-11 dark:text-violet-dark-11 hover:underline underline-offset-2" href="sms:+33647046382">
-							SMS
-						</a>.
+						</a> ou un  <a class="text-violet-11 dark:text-violet-dark-11 underline underline-offset-2" href=`sms:${phone}`>SMS</a>.
 					</p>
 				</div>
 			</Section>
-
 		</div>
 	</main>
 </Layout>
